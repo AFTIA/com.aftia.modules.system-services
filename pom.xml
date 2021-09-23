@@ -43,60 +43,18 @@
     <hibernate-types.version>2.10.3</hibernate-types.version>
     <jsonpath.version>2.5.0</jsonpath.version>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>central</id>
-      <url>https://repo1.maven.org/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>patlego-website</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/pat-lego/com.aftia.modules.website</url>
-    </repository>
-    <repository>
-      <id>patlego-html</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/pat-lego/com.aftia.modules.html</url>
-    </repository>
-    <repository>
-      <id>patlego-iot</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/pat-lego/com.aftia.modules.iot</url>
-    </repository>
-  </repositories>
   
   <distributionManagement>
     <repository>
       <id>patlego-core</id>
       <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/pat-lego/com.aftia.modules</url>
+      <url>https://maven.pkg.github.com/AFTIA/com.aftia.modules</url>
     </repository>
   </distributionManagement>
 
   <build>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.karaf.tooling</groupId>
-          <artifactId>karaf-services-maven-plugin</artifactId>
-          <version>${karaf.runtime.version}</version>
-          <executions>
-            <execution>
-              <id>service-metadata-generate</id>
-              <phase>process-classes</phase>
-              <goals>
-                <goal>service-metadata-generate</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -108,39 +66,12 @@
           <version>3.2.2</version>
         </plugin>
         <plugin>
-          <groupId>org.eluder.coveralls</groupId>
-          <artifactId>coveralls-maven-plugin</artifactId>
-          <version>4.3.0</version>
-          <dependencies>
-            <dependency>
-              <groupId>javax.xml.bind</groupId>
-              <artifactId>jaxb-api</artifactId>
-              <version>2.3.1</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-        <plugin>
-          <groupId>com.google.code.maven-replacer-plugin</groupId>
-          <artifactId>replacer</artifactId>
-          <version>1.5.3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.5</version>
-        </plugin>
-        <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
           <version>5.1.2</version>
           <inherited>true</inherited>
         </plugin>
-        <plugin>
-          <groupId>org.apache.karaf.tooling</groupId>
-          <artifactId>karaf-maven-plugin</artifactId>
-          <version>${karaf.runtime.version}</version>
-        </plugin>
-        <plugin>
+         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
