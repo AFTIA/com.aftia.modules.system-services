@@ -1,4 +1,4 @@
-package io.github.patlego.enc;
+package com.aftia.modules.enc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

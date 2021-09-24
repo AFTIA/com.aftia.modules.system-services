@@ -1,4 +1,4 @@
-package io.github.patlego.enc.commands;
+package com.aftia.modules.enc.commands;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

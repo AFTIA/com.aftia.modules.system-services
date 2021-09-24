@@ -2,6 +2,8 @@ package com.aftia.modules.config.runmodes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.aftia.modules.config.runmodes.RunModeBean;
+
 import org.junit.jupiter.api.Test;
 
 public class TestRunModeBean {
